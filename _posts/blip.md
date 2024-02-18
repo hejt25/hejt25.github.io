@@ -1,3 +1,12 @@
+
+---
+title: Blip
+author: Tao He
+date: 2021-08-10
+category: Jekyll
+layout: post
+---
+
 ### 理论：
 
 1. Motivation
