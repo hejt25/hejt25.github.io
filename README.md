@@ -108,6 +108,34 @@ tracker:
 disqushandler: "<YOUR DISQUS SHORTNAME>"
 ```
 
+## Jekyll collections
+
+Jekyll's [collections][15] is supported to organize the pages in a more fine-grained manner, e.g.,
+
+```yaml
+collections:
+  pages:
+    output: true
+    sort_by: date
+    permalink: /:collection/:year-:month-:day-:title:output_ext
+  others:
+    output: true
+    sort_by: date
+    permalink: /:collection/:year-:month-:day-:title:output_ext
+```
+
+An optional `ordered_collections` key can be added to `_config.yaml` to control the order of collections in the sidebar:
+
+```yaml
+ordered_collections:
+  - posts
+  - pages
+  - others
+```
+
+If not specified, the order of collections would be decided by Jekyll. Note that the key `posts` is a special collection
+that indicates the `_posts` pages of Jekyll.
+
 ## Extra StyleSheet or Javascript elements
 
 You can add extra CSS or JavaScript references using configuration collections:
@@ -204,3 +232,4 @@ Copyright 2019 Tao He.
 [12]: https://rubygems.org/gems/jekyll-remote-theme
 [13]: https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/adding-a-theme-to-your-github-pages-site-using-jekyll
 [14]: https://github.com/sighingnow/jekyll-gitbook/blob/master/_config.yml
+[15]: https://jekyllrb.com/docs/collections/
